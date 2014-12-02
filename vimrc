@@ -15,3 +15,9 @@ set smartindent
 set wildmenu
 set showmode
 set visualbell
+" to save Ctrl+s
+" <CR> is for carriage return, this does not work when vi is invoked from a
+" terminal, for the terminal interprets ctrl+s rather than that instance of
+" vim
+map <c-s> :w<CR>
+imap <c-s> <esc>:w<CR>
