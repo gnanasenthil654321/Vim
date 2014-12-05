@@ -1,3 +1,4 @@
+"Thanks STEVE LOSH FOR YOUR BOOK LEARNING VIM THE HARD WAY
 "My Vimrc file
 set showcmd 
 set number
@@ -14,14 +15,22 @@ set smartindent
 set wildmenu
 set showmode
 set visualbell
+"leader setting
+let mapleader = "-"
 
 " to save Ctrl+s
 " <CR> is for carriage return, this does not work when vi is invoked from a
 " terminal, for the terminal interprets ctrl+s rather than that instance of
 " vim
-map <c-s> :w<CR>a
-imap <c-s> <esc>:w<CR>a
+noremap <leader>s :w<CR>a
+inoremap <leader>s <esc>:w<CR>a
 " ctrl + w will delete a word to the left of the cursor and gets back to
 " append mode.
-map <c-w> bdwa
-imap <c-w> <esc>bdwa
+noremap <leader>w bdwa
+inoremap <leader>w <esc>bdwa
+"remapping for deleting line
+noremap <leader>d dd
+"remapping to make easier editing of this file
+noremap <leader>ev :split $MYVIMRC<cr>G$a
+"remapping to sourcing easier
+noremap <leader>sv :source $MYVIMRC<cr>
