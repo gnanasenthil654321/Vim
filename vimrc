@@ -1,5 +1,4 @@
-"Thanks STEVE LOSH FOR YOUR BOOK LEARNING VIM THE HARD WAY
-"My Vimrc file
+
 set showcmd 
 set number
 set incsearch
@@ -16,7 +15,7 @@ set wildmenu
 set showmode
 set visualbell
 "leader setting
-let mapleader = "-"
+let mapleader = ","
 
 " to save Ctrl+s
 " <CR> is for carriage return, this does not work when vi is invoked from a
@@ -34,3 +33,15 @@ noremap <leader>d dd
 noremap <leader>ev :split $MYVIMRC<cr>G$a
 "remapping to sourcing easier
 noremap <leader>sv :source $MYVIMRC<cr>
+"few abbreviations
+iabbrev @@ gnanasenthil654321@gmail.com
+iabbrev adn and
+iabbrev wehn when
+iabbrev teh the
+"surround a word with double quotes
+nnoremap <leader>' viw<esc>bi"<esc>ea"
+"surround a line with double quotes
+nnoremap <leader>" 0i"<esc>$a"
+" use j and k to change to normal mode 
+inoremap jk <esc>
+
