@@ -1,3 +1,4 @@
+
 set showcmd 
 set number
 set incsearch
@@ -52,3 +53,5 @@ function! HtmlTag()
 	let tags = ["<html>","</html>"]
 	return tags
 endfunction
+
+nnoremap  <localleader>h ggi<cr><esc>ki<html><esc>G$a<cr></html>
