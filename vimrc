@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+
+=======
 "myvimrc, 
+>>>>>>> 091f7bd208d00c2dd4b8d7d65d0698ac16e0af7a
 set showcmd 
 set number
 set incsearch
@@ -51,6 +55,7 @@ vnoremap jk <esc>
 "auto save feature(when ever the user moves to next line or puts a period)
 "Automatic uppercasing of the first letter of the line.
 
+<<<<<<< HEAD
 "html file specific autocommands
 augroup filetype_html
 	autocmd!
@@ -61,3 +66,13 @@ augroup filetype_html
 	"to tag the lines with <b> tags
 	autocmd FileType html nnoremap <buffer> <localleader>B 0i<b><esc>$a</b><esc>:w<cr>
 augroup END
+=======
+"some functions here
+
+function! HtmlTag()
+	let tags = ["<html>","</html>"]
+	return tags
+endfunction
+
+nnoremap  <localleader>h ggi<cr><esc>ki<html><esc>G$a<cr></html>
+>>>>>>> 7daa730d5d6647efacff76e6f55250b6f0bd561d
